@@ -8,9 +8,9 @@
             <div class="footer__list">
                 <h3>Get Help</h3>
                 <ul>
-                    <li>Delivery methods</li>
-                    <li>Payments methods</li>
-                    <li>Return and exchange</li>
+                    <li>Delivery Methods</li>
+                    <li>Payments Methods</li>
+                    <li>Return and Exchange</li>
                 </ul>
             </div>
             <div class="footer__list">
@@ -58,7 +58,7 @@
         color: var(--clr-primary-white);
         width: 100%;
         display: grid;
-        padding: 2.5rem 1rem 1rem 1rem;
+        padding: 3rem 1rem 1rem 1rem;
         font-size: .8rem;
         position: sticky;
         top: 100%;

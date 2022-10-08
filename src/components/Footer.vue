@@ -3,7 +3,8 @@
 
 <template>
     <footer>
-        <div class="footer__row">
+        
+        <div class="footer__container">
             <div class="footer__list">
                 <h3>Get Help</h3>
                 <ul>
@@ -12,7 +13,6 @@
                     <li>Return and exchange</li>
                 </ul>
             </div>
-
             <div class="footer__list">
                 <h3>Support</h3>
                 <ul>
@@ -20,9 +20,8 @@
                     <li>Send an Opinion</li>
                 </ul>
             </div>
-        </div>
-
-        <div class="footer__row">
+            
+            
             <div class="footer__list">
                 <h3>About Us</h3>
                 <ul>
@@ -30,7 +29,6 @@
                     <li>Contact</li>
                 </ul>
             </div>
-
             <div class="footer__list">
                 <h3>Contact</h3>
                 <ul>
@@ -38,8 +36,8 @@
                     <li>teahouse@mail.com</li>
                 </ul>
             </div>
-        </div>
-        <div class="footer__row">
+            
+            
             <div class="footer__list">
                 <h3>Follow Us</h3>
                 <ul>
@@ -48,6 +46,8 @@
                 </ul>
             </div>
         </div>
+        <p class="footer__paragraph">&copy2022 | Designed and Built by Gloria Mancini & Niall Byrnes</p>
+        
     </footer>
 </template>
 
@@ -56,36 +56,58 @@
     footer {
         background-color: var(--clr-cinnamon);
         color: var(--clr-primary-white);
-        padding: .7rem;
-        font-size: .7rem;
-    }
-
-    .footer__row {
-        display: flex;
         width: 100%;
-        justify-content: space-between; 
+        display: grid;
+        padding: 2.5rem 1rem 1rem 1rem;
+        font-size: .8rem;
+        position: sticky;
+        top: 100%;
     }
 
-    .footer__list {
-        width: 160px;
-        padding: 1rem;
+    .footer__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5em;
+        margin: 0 auto;
+        
+    }
+    
+
+    .footer__list>ul {
+        padding-left: 0;
         
     }
 
-    .footer__list>ul {
-        padding: 0;
-        margin-top: .8rem;
+    .footer__list>ul>li {
+        padding-top: .5rem;
+    }
+
+    .footer__paragraph {
+        font-size: .8rem;
+        margin-top: 2.5rem;
+        text-align: center;
     }
 
 
-    @media screen and (min-width: 700px) {
-        footer {
-            display: flex;
-            width: 100%;
-            
+    @media screen and (min-width: 750px) {
+        .footer {
+            padding: 1.5rem 1rem;
         }
 
+        .footer__container { 
+        grid-auto-flow: column;
+       }
     }
+
+
+    @media screen and (min-width: 540px) {
+       .footer__container { 
+        grid-template-columns: repeat(3, 1fr);
+       }
+
+    }
+
+   
 
 
 </style>

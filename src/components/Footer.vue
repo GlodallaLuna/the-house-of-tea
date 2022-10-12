@@ -46,7 +46,7 @@
                 </ul>
             </div>
         </div>
-        <p class="footer__paragraph">&copy2022 | Designed and Built by Gloria Mancini & Niall Byrnes</p>
+        <p class="footer__paragraph">&copy2022 | Designed and Built by <a href="">Gloria Mancini</a> & <a href="">Niall Byrnes</a></p>
         
     </footer>
 </template>

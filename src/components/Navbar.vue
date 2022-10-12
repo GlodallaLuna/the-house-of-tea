@@ -1,15 +1,42 @@
 <script>
-
-   
+export default {
     
+    data () {
+        return {
+            isOpen: false,
+            isHome: true,
+        }
+    },
+    
+    methods: {
+        navSwitcher () {
+            this.isOpen = !this.isOpen
+        }
+        
+    },
+
+    computed: {
+        openCloseClass () {
+            return this.isOpen ? 'open' : 'closed'
+        },
+
+        icon () {
+            return this.isOpen ? 'fa-solid fa-circle-xmark' : 'fa-solid fa-bars'
+        },
+
+        background () {
+            return this.isHome ? '' : 'nav-cinnamon'
+        }
+    }
+}
 </script>
 
 <template>
 
-<nav>
+<nav :class="background">
     <div class="logo"><a href=""><img src="@/assets/images/logo.svg" alt=""></a></div>
-    <button class="toggle" aria-controls="nav-control" area-expanded="false"><font-awesome-icon class="hamburger" icon="fa-solid fa-bars" /></button>
-    <div class="primary-nav">
+    <button @click="navSwitcher" class="toggle" aria-controls="nav-control" area-expanded="false"><font-awesome-icon class="hamburger" :icon="icon" /></button>
+    <div class="primary-nav" :class="openCloseClass">
         <div></div>
         <div class="primary-nav__links">
             <ul class="nav__links" id="nav-control">
@@ -30,9 +57,17 @@
 
 
 <style>
+body {
+    background-color: black;
+}
+
 nav {
     display: flex;
     padding: .7rem 1.5rem;
+    
+}
+
+.nav-cinnamon {
     background-color: var(--clr-cinnamon);
 }
 
@@ -95,8 +130,14 @@ nav {
         background-color: var(--clr-cinnamon);
         justify-content: start;
         z-index: 999;
+    }
+
+    .closed {
         transform: translateX(100%);
-        
+    }
+
+    .open {
+        transform: translateX(0%);
     }
 
     

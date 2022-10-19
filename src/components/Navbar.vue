@@ -1,32 +1,46 @@
 <script>
+import { RouterLink, RouterView } from 'vue-router';
 export default {
+    
+    props: {
+        // Changes style to transparent if isHome is true (this is done in computed background)
+        page: String
+    },
     
     data () {
         return {
             isOpen: false,
-            isHome: true,
         }
     },
     
     methods: {
+        //logic for the event listener to open and close navbar
         navSwitcher () {
             this.isOpen = !this.isOpen
+        },
+        //to underline the navbar link that is the same as the current page
+        underline (targetPage) {
+            return targetPage === this.page ? 'underlined' : ''
         }
         
     },
 
     computed: {
+
+        // Opening and closing the mobile navbar
         openCloseClass () {
             return this.isOpen ? 'open' : 'closed'
         },
-
+        //for changing the hamburger to X
         icon () {
-            return this.isOpen ? 'fa-solid fa-circle-xmark' : 'fa-solid fa-bars'
+            return this.isOpen ? 'fa-solid fa-square-xmark' : 'fa-solid fa-bars'
         },
 
+        // Make the navbar transparent on the home page
         background () {
-            return this.isHome ? '' : 'nav-cinnamon'
-        }
+            return this.page === 'home' ? '' : 'nav-cinnamon'
+        },
+
     }
 }
 </script>
@@ -40,8 +54,8 @@ export default {
         <div></div>
         <div class="primary-nav__links">
             <ul class="nav__links" id="nav-control">
-                <li><a class="nav__link" href="">Home</a></li>
-                <li><a class="nav__link" href="">Shop</a></li>
+                <li><router-link to="/" class="nav__link" :class="underline('home')">Home</router-link></li>
+                <li><router-link to="/shop" class="nav__link" :class="underline('shop')">Shop</router-link></li>
                 <li><a class="nav__link" href="">Contact</a></li>
             </ul>
         </div>
@@ -51,19 +65,18 @@ export default {
             : &euro;0
         </div>
     </div>
+    
 </nav>
     
 </template>
 
 
 <style>
-body {
-    background-color: black;
-}
+
 
 nav {
     display: flex;
-    padding: .7rem 1.5rem;
+    padding: 1rem 1.5rem .7rem 1.5rem;
     
 }
 
@@ -95,18 +108,22 @@ nav {
     font-size: 1.2rem;
 }
 
+.underlined {
+    text-decoration: underline;
+}
+
 .icon,
 .container__cart {
     color: white;
     font-family: var(--font-cinzel);
-    
+    font-size: 1.2rem;
 }
 
 .cart {
   font-size: 1.3rem;
 }
 
-@media screen and (max-width: 35em) {
+@media screen and (max-width: 43.125em) {
     .toggle {
         visibility: visible;
         position: absolute;
@@ -165,6 +182,7 @@ nav {
 
     .container__cart{
         padding: 2rem  2.5rem;
+        font-size: 1.5rem;
         
     }
 }

@@ -35,6 +35,16 @@ h1,h2,h3 {
   font-weight: 400;
 }
 
+h2 {
+  font-size: 1.6rem;
+  padding: 0 1.3rem;
+  line-height: 1.3;
+}
+
+p {
+  padding: 0 1.3rem
+}
+
 a,
 a:visited,
 a:active {
@@ -55,14 +65,26 @@ img {
     display: block;
 }
 
+
 ul {
   list-style: none;
 }
 
-.flex {
-  display: flex
+.header--shop {
+  padding: 0 1.3rem;
+  margin-top: 1.5rem;
 }
 
-.grid {
-  display: grid;
+
+
+@media screen and (min-width: 50.9em) {
+  h2 {
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+
+  p {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+  }
 }

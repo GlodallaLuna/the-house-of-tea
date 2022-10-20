@@ -32,7 +32,25 @@ export default {
                 <h3 class="menu__title">Categories</h3>
                 <font-awesome-icon class="arrow-down" icon="fa-solid fa-chevron-down" />
             </button>
-            <div class="dropdown-menu" :class="openCloseClass">content</div>
+            <div class="dropdown-menu" :class="openCloseClass">
+                <ul class="menu__links" >
+                    <li><a class="menu__link" href="#">All</a></li>
+                    <li><a class="menu__link" href="#">Black Tea</a></li>
+                    <li><a class="menu__link" href="#">Green Tea</a></li>
+                    <li><a class="menu__link" href="#">White Tea</a></li>
+                    <li><a class="menu__link" href="#">Matcha</a></li>
+                    <li><a class="menu__link" href="#">Herbal Tea</a></li>
+                    <li><a class="menu__link" href="#">Rooibos</a></li>
+                    <li><a class="menu__link" href="#">Best Sellers </a><font-awesome-icon icon="fa-regular fa-star"/></li>
+                    <li><a class="menu__link" href="#">New Arrivals</a></li>
+                </ul>
+
+                <div class="menu__sorted-price">
+                    <h3 class="menu__title">Sorted by Price</h3>
+                    <div class="menu__checkbox"><label><input type="radio" name="radio"/> Low to High </label></div>
+                    <div class="menu__checkbox"><label><input type="radio" name="radio"/> High to Low </label></div>
+                </div>
+            </div>
         </div>
         
     </div>
@@ -51,7 +69,7 @@ export default {
 } 
 
 .dropdown {
-    padding: .2rem .4rem;
+    padding: .3rem 1rem;
 }
 
 .dropdown-menu {
@@ -59,8 +77,27 @@ export default {
     left: 0;
     width: 100%;
     border-top: none;
-    padding: .2rem 1rem;
-    font-size: 1.2rem;
+    
+    z-index: 998;
+    
+}
+
+.menu__links {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.menu__links>li {
+    margin-left: 1.5rem;
+    padding: .5rem;
+}
+
+.menu__link {
+    color: var(--clr-primary-black);
+}
+
+.menu__link:hover {
+    text-decoration: underline;
 }
 .menu__title {
     font-family: var(--font-cinzel);
@@ -81,6 +118,15 @@ export default {
 .arrow-down {
     font-size: 1.35rem;
     color: var(--clr-gray-200);
+}
+
+.menu__sorted-price {
+    padding: 1.5rem 1.2rem 1rem 1.2rem;
+}
+
+.menu__checkbox {
+    margin-left: 1.5rem;
+    padding: .2rem 
 }
 
 

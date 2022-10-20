@@ -11,7 +11,8 @@ import { faSquareXmark } from '@fortawesome/free-solid-svg-icons'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-library.add(faBagShopping, faBars, faSquareXmark, faArrowLeftLong, faMagnifyingGlass, faChevronDown)
+import { faStar } from '@fortawesome/free-regular-svg-icons'
+library.add(faBagShopping, faBars, faSquareXmark, faArrowLeftLong, faMagnifyingGlass, faChevronDown, faStar)
 
  
 

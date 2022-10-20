@@ -1,6 +1,7 @@
 <script></script>
 
 <template>
+    <!-- under construction -->
     <header class="header--shop">
         <div class="wrapper__title">
             <font-awesome-icon class="arrow" icon="fa-solid fa-arrow-left-long"/>

@@ -10,7 +10,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faSquareXmark } from '@fortawesome/free-solid-svg-icons'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-library.add(faBagShopping, faBars, faSquareXmark, faArrowLeftLong, faMagnifyingGlass)
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+library.add(faBagShopping, faBars, faSquareXmark, faArrowLeftLong, faMagnifyingGlass, faChevronDown)
 
  
 

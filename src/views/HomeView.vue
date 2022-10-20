@@ -10,7 +10,7 @@ import Footer from '../components/Footer.vue'
         <div class="header__content">
             <p class="subtitle">Organic Tea Shop</p>
             <h1 class="title">The House of Tea</h1>
-            <button class="header__button">View Shop</button>
+            <router-link to="/shop" class="header__button">View Shop</router-link>
         </div>
     </header>
 
@@ -66,7 +66,7 @@ import Footer from '../components/Footer.vue'
                     <h3 class="title--arrivals"><a href="">Jasmine Ling</a></h3>
                 </div>
             </div>
-            <div class="wrapper__button"><button class="arrivals__button">Browse Teas</button></div>
+            <div class="wrapper__button"><router-link to="/shop" class="arrivals__button">Browse Teas</router-link></div>
         </div>
     </main>
 
@@ -127,6 +127,7 @@ import Footer from '../components/Footer.vue'
 .header__button:hover,
 .arrivals__button:hover {
     background-color: var(--clr-cinnamon);
+    text-decoration: none;
 }
 
 /*sections styles */

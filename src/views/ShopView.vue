@@ -1,17 +1,17 @@
 <script setup>
 import Navbar from '../components/Navbar.vue'
-
+import Menu from '../components/Menu.vue'
 import Footer from '../components/Footer.vue'
 </script>
 
 <template>
 
     <Navbar page="shop" />
-    <!-- here goes the menu component -->
+    <Menu />
     <!-- div to heandle the header and grid component in mobile and desktop version -->
     <div>
         <header class="header--shop">
-            <h2 class="title"> Categories: New Arrivals</h2>
+            <h2 class="title--shop"> Categories: New Arrivals</h2>
             <div class="searchbar">
                 <input type="text" class="search__input" aria-label="search" placeholder="search...">
                 <button class="search__submit" aria-label="submit"><font-awesome-icon class="submit__icon" icon="fa-solid fa-magnifying-glass" /></button>
@@ -33,7 +33,7 @@ h2 {
     display: flex;
     margin-top: 1rem;
     border: 1px solid var(--clr-gray-100);
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: var(--box-shadow);
     border-radius: 50px;
     padding: .3rem .5rem;
 }

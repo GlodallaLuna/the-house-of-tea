@@ -1,6 +1,24 @@
 <script setup>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import { ref, computed } from 'vue'
+
+const props = defineProps({
+    stock: Array
+})
+
+const newArrivals = computed(() => {
+    
+    // Get all the new arrivals
+    const newArrivals = props.stock.filter((tea) => {
+        return tea["new-arrival"] === "true"
+    })
+    
+    // Take the first three
+    const threeArrivals = newArrivals.slice(0,3)
+    return threeArrivals
+})
+
 </script>
 
 <template>
@@ -52,18 +70,10 @@ import Footer from '../components/Footer.vue'
         <div class="section section__light">
             <h2 class="title--cinnamon centered">New Arrivals</h2>
             <p class="centered">Our Seasonal Selection</p>
-            <div class="content-wrapper--arrivals">
-                <div>
-                    <div class="img--arrivals"><img src="https://images.unsplash.com/photo-1628153792464-21bffac488d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="tea leaves"></div>
-                    <h3 class="title--arrivals"><a href="">Jasmine Ling</a></h3>
-                </div>
-                <div>
-                    <div class="img--arrivals"><img src="https://images.unsplash.com/photo-1628153792464-21bffac488d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="tea leaves"></div>
-                    <h3 class="title--arrivals"><a href="">Jasmine Ling</a></h3>
-                </div>
-                <div>
-                    <div class="img--arrivals"><img src="https://images.unsplash.com/photo-1628153792464-21bffac488d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="tea leaves"></div>
-                    <h3 class="title--arrivals"><a href="">Jasmine Ling</a></h3>
+            <div class="content-wrapper--arrivals">                
+                <div v-for="tea in newArrivals">
+                    <div class="img--arrivals"><img :src="tea.image"></div>
+                    <h3 class="title--arrivals"><a href="">{{tea.name}}</a></h3>
                 </div>
             </div>
             <div class="wrapper__button"><router-link to="/shop" class="arrivals__button">Browse Teas</router-link></div>

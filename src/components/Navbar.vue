@@ -1,83 +1,69 @@
-<script>
+<script setup>
 import { RouterLink, RouterView } from 'vue-router';
-export default {
-    
-    props: {
-        // Changes style to transparent if isHome is true (this is done in computed background)
-        page: String
-    },
-    
-    data () {
-        return {
-            isOpen: false,
-        }
-    },
-    
-    methods: {
-        //logic for the event listener to open and close navbar
-        navSwitcher () {
-            this.isOpen = !this.isOpen
-        },
-        //to underline the navbar link that is the same as the current page
-        underline (targetPage) {
-            return targetPage === this.page ? 'underlined' : ''
-        }
-        
-    },
+import { ref, computed } from 'vue'
 
-    computed: {
+const props = defineProps({
+    // Changes style to transparent if isHome is true (this is done in computed background)
+    page: String
+})
 
-        // Opening and closing the mobile navbar
-        openCloseClass () {
-            return this.isOpen ? 'open' : 'closed'
-        },
-        //for changing the hamburger to X
-        icon () {
-            return this.isOpen ? 'fa-solid fa-square-xmark' : 'fa-solid fa-bars'
-        },
+// Reactive state variables
+const isOpen = ref(false);
 
-        // Make the navbar transparent on the home page
-        background () {
-            return this.page === 'home' ? '' : 'nav-cinnamon'
-        },
+// Opening and closing the mobile navbar
+const openCloseClass = computed(() => isOpen.value ? 'open' : 'closed')    
 
-    }
-}
+//for changing the hamburger to X
+const icon = computed(() => isOpen.value ? 'fa-solid fa-square-xmark' : 'fa-solid fa-bars')
+
+// Make the navbar transparent on the home page
+const background = computed(() => props.page === 'home' ? '' : 'nav-cinnamon') 
+
+//logic for the event listener to open and close navbar
+const navSwitcher = () => isOpen.value = !isOpen.value
+
+//to underline the navbar link that is the same as the current page
+const underline = (targetPage) => targetPage === props.page ? 'underlined' : ''
+
 </script>
 
 <template>
 
-<nav :class="background">
-    <div class="logo"><a href=""><img src="@/assets/images/logo.svg" alt=""></a></div>
-    <button @click="navSwitcher" class="toggle" aria-controls="nav-control" area-expanded="false"><font-awesome-icon class="hamburger" :icon="icon" /></button>
-    <div class="primary-nav" :class="openCloseClass">
-        <div></div>
-        <div class="primary-nav__links">
-            <ul class="nav__links" id="nav-control">
-                <li><router-link to="/" class="nav__link" :class="underline('home')">Home</router-link></li>
-                <li><router-link to="/shop" class="nav__link" :class="underline('shop')">Shop</router-link></li>
-                <li><a class="nav__link" href="">Contact</a></li>
-            </ul>
+    <nav :class="background">
+        <div class="logo"><a href=""><img src="@/assets/images/logo.svg" alt=""></a></div>
+        <button @click="navSwitcher" class="toggle" aria-controls="nav-control" area-expanded="false">
+            <font-awesome-icon class="hamburger" :icon="icon" />
+        </button>
+        <div class="primary-nav" :class="openCloseClass">
+            <div></div>
+            <div class="primary-nav__links">
+                <ul class="nav__links" id="nav-control">
+                    <li>
+                        <router-link to="/" class="nav__link" :class="underline('home')">Home</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/shop" class="nav__link" :class="underline('shop')">Shop</router-link>
+                    </li>
+                    <li><a class="nav__link" href="">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="container__cart">
+                <font-awesome-icon class="cart" icon="fa-solid fa-bag-shopping" />
+                : &euro;0
+            </div>
         </div>
-    
-        <div class="container__cart">
-            <font-awesome-icon class="cart" icon="fa-solid fa-bag-shopping" />
-            : &euro;0
-        </div>
-    </div>
-    
-</nav>
-    
+
+    </nav>
+
 </template>
 
 
 <style>
-
-
 nav {
     display: flex;
     padding: 1rem 1.5rem .7rem 1.5rem;
-    
+
 }
 
 .nav-cinnamon {
@@ -93,7 +79,7 @@ nav {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    
+
 }
 
 
@@ -120,7 +106,7 @@ nav {
 }
 
 .cart {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 
 @media screen and (max-width: 43.125em) {
@@ -142,7 +128,7 @@ nav {
 
     .primary-nav {
         position: fixed;
-        padding: min(10vh, 5rem) 2em; 
+        padding: min(10vh, 5rem) 2em;
         inset: 0 0 0 0;
         background-color: var(--clr-cinnamon);
         justify-content: start;
@@ -157,8 +143,8 @@ nav {
         transform: translateX(0%);
     }
 
-    
-    
+
+
     .primary-nav__links,
     .primary-nav,
     .nav__links {
@@ -176,16 +162,14 @@ nav {
 
     .cart,
     .nav__link,
-    .container__icon{
-        font-size: 1.5rem; 
+    .container__icon {
+        font-size: 1.5rem;
     }
 
-    .container__cart{
-        padding: 2rem  2.5rem;
+    .container__cart {
+        padding: 2rem 2.5rem;
         font-size: 1.5rem;
-        
+
     }
 }
-
-
 </style>

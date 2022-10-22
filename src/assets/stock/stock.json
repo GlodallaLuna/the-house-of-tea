@@ -1,0 +1,169 @@
+{
+    "stock": [
+        {
+            "name": "Ceylon Balck",
+            "description": "Black tea with a fresh aroma and zesty flavors. Well balanced, with a brisk and lively flavor, it makes an energizing cup of tea. Ceylon tea is a fine blend of high-altitude teas from the far away hillsides of Sir Lanka. Our Ceylon also make an excellent iced tea, steeped with lemon and sugar.  Naturally caffeinated & sugar free.",
+            "price": "16.00",
+            "category": "black",
+            "image": "https://images.unsplash.com/photo-1433891248364-3ce993ff0e92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "new-arrival": "false",
+            "best-seller": "false",
+            "temperature": "100",
+            "time": "3-5"
+        },
+        {
+            "name": "Long Leef Black",
+            "description": "Long leaf teas provide a subtle, elegant and aesthetically pleasing experience. The leaves unfurl while steeping, gently releasing their sweet and delicate character. Compared to other teas that use the CTC method, long leaf teas produce and display a more elaborate, varied and complex array of aromas, colors and mouthfeels. ",
+            "price": "8.00",
+            "category": "black",
+            "image": "https://images.unsplash.com/photo-1627764611688-2d07255e995e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+            "new-arrival": "true",
+            "best-seller": "false",
+            "temperature": "100",
+            "time": "3-5"
+        },
+        {
+            "name": "Mandarin Yunnan",
+            "description": "Yunnan black tea is a fully oxidised tea grown high in the mountainous region of Lincang between 1680-1900 metres above sea level. Yunnan has layers of caramel and cocoa with light, peppery notes on the finish.  Treat yourself with this exquisite mandarin variant.",
+            "price": "10.00",
+            "category": "black",
+            "image": "https://images.unsplash.com/photo-1627828094418-cd2a87b29fdc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+            "new-arrival": "false",
+            "best-seller": "true",
+            "temperature": "93",
+            "time": "3-5"
+        },
+        {
+            "name": "Jasmine Ling",
+            "description": "Jasmine Ling is a black tea scented with the aroma of jasmine blossoms. It  is subtly sweet and highly fragrant.   Some of the benefits of jasmine tea include aiding calm, improving mental clarity, and boosting your immune system.",
+            "price": "8.50",
+            "category": "black",
+            "image": "https://images.unsplash.com/photo-1628153792464-21bffac488d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+            "new-arrival": "true",
+            "best-seller": "false",
+            "temperature": "95",
+            "time": "4-5"
+        },
+        {
+            "name": "Gold Darjeeling",
+            "description": "Gold Darjeeling is a fine, rare, gold-tipped leaf varietal from the acclaimed tea-growing region of Mirik valley, Darjeeling, India. It is made in late summer, at the oldest tea factory in Darjeeling. The flavour is smooth, buttery with a honey texture.",
+            "price": "13.00",
+            "category": "black",
+            "image": "https://images.unsplash.com/photo-1604697976842-d36fa5a1b2ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            "new-arrival": "false",
+            "best-seller": "true",
+            "temperature": "93",
+            "time": "3-5"
+        },
+        {
+            "name": "Lao Cha Tou Pu-erh",
+            "description": "It's a particular type of cooked pu-erh  (fermented tea) common in China.. Compared with loose-leaf tea, Lao Cha Tou is richer in content and far more resistant to brewing. As a result, it releases thicker and denser tea liquor. The taste is sweet, with notes of dates and plum jam.",
+            "price": "11.00",
+            "category": "black",
+            "image": "https://images.unsplash.com/photo-1628153687586-c546871a7106?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+            "new-arrival": "false",
+            "best-seller": "false",
+            "temperature": "100",
+            "time": "4-5"
+        },
+        {
+            "name": "Zhejiang Green",
+            "description": "Also known as Tian Mu Qing Ding, this high mountain, spring green tea comes from Zhejiang Province in China. It is made from the delicate top buds and leaves of the tea plant. The brew is very light with a clean, refreshing taste. The flavoure is slightly nutty, naturally sweet and non-astringent with some bright citrus notes.",
+            "price": "11.50",
+            "category": "green",
+            "image": "https://images.unsplash.com/photo-1543060895-03f57478a710?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80",
+            "new-arrival": "false",
+            "best-seller": "true",
+            "temperature": "82-88",
+            "time": "2-3"
+        },
+        {
+            "name": "Asanoka Sencha",
+            "description": "From the Asanoka cultivar which was developed in the 1990s in Kagoshima, Japan. Light and velvetty, this Asanoka was shade-grown for about two weeks before plucking and uses a light steaming (Asamushi) process.  Light and velvetty with hints of melon and spring flowers.",
+            "price": "14.30",
+            "category": "green",
+            "image": "https://cdn.pixabay.com/photo/2015/05/20/05/43/dried-774823_960_720.png",
+            "new-arrival": "true",
+            "best-seller": "false",
+            "temperature": "71-77",
+            "time": "2-3"
+        },
+        {
+            "name": "Thai Nguyen Chen-se",
+            "description": "Grown in the northern province of Thai Nguyen in Vietnam, Che Sen, or Lotus tea, is a fine green tea infused with the aroma of lotus flower blossoms. It is famous for its rich floral and fruit aroma followed by a refreshing flavor. It also contains notes of anise with a pleasant aftertaste.",
+            "price": "9.00",
+            "category": "green",
+            "image": "https://cdn.pixabay.com/photo/2016/03/03/10/19/green-tea-1233874_960_720.jpg",
+            "new-arrival": "true",
+            "best-seller": "false",
+            "temperature": "71-77",
+            "time": "2-3"
+        },
+        {
+            "name": "Milky Oolong",
+            "description": "Our Milky Oolong offers a buttery sweetness similar to caramel. This nutty, creamy tea offers a delicious and elegant infusion, perfect for a relaxing afternoon. A truly unique Oolong from the Chinese Fujian Province. ",
+            "price": "12.50",
+            "category": "green",
+            "image": "https://images.unsplash.com/photo-1627894006066-b45786537103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=917&q=80",
+            "new-arrival": "false",
+            "best-seller": "true",
+            "temperature": "80",
+            "time": "3-4"
+        },
+        {
+            "name": "Green Earl Grey",
+            "description": "Perfect for afternoon sipping, citrusy bergamot enlivens the bold flavors of gunpowder green tea. A lighter take on a classic, this Green Earl Grey is a hand-crafted blend of Chinese gunpowder green tea and organic bergamot essence. This rich green tea flavor with  a faint smokiness in the background pairs especially well with breakfast breads, rice desserts, and slightly spicy foods.",
+            "price": "10.00",
+            "category": "green",
+            "image": "https://images.unsplash.com/photo-1627894006047-0a157493a390?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+            "new-arrival": "false",
+            "best-seller": "false",
+            "temperature": "71-77",
+            "time": "2-3"
+        },
+        {
+            "name": "Okabe Gyokuro",
+            "description": "Gyokuro is a current favorite due to its smooth, refined, citrusy flavor and lingering sweetness. Gyokuro expresses different flavor nuances when hot or iced. Even slight variations in the temperature and steeping time can influence the flavor of the brew. It is a good idea to experiment with brewing until one lands on the preferred flavor",
+            "price": "18.30",
+            "category": "green",
+            "image": "https://images.unsplash.com/photo-1594134858547-8b126843389e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "new-arrival": "true",
+            "best-seller": "false",
+            "temperature": "60",
+            "time": "2-3"
+        },
+        {
+            "name": "Gold Chamomile",
+            "description": "Chamomile was described in ancient medical writings and was an important medicinal herb in ancient Egypt, Greece, and Rome. Today, chamomile is promoted for sleeplessness, anxiety, and gastrointestinal conditions such as upset stomach.",
+            "price": "6.00",
+            "category": "herbal",
+            "image": "https://cdn.pixabay.com/photo/2015/05/20/05/35/herb-774818_960_720.png",
+            "new-arrival": "flase",
+            "best-seller": "false",
+            "temperature": "90",
+            "time": "4-5"
+        },
+        {
+            "name": "Pitta-Dosha",
+            "description": "Our Ayurvedic Pitta-Dosha Blend delights the senses with a fuchsia-colored brew, bright and fruity aroma, sweet and tart flavors, and a cooling, smooth mouthfeel. Pitta regulates digestion and absorption, and promotes balance in vitality and appetite. It's caffeine-free, slightly tart and sweet, with a smooth texture.",
+            "price": "9.30",
+            "category": "herbal",
+            "image": "https://images.unsplash.com/photo-1596344084757-b83f2081da8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
+            "new-arrival": "false",
+            "best-seller": "true",
+            "temperature": "100",
+            "time": "5-6"
+        },
+        {
+            "name": "Christmas Brew",
+            "description": "Our Christmas blend is an excellent spiced infusion ideal for warming up colder evenings.  Ingredients:  Anise, Cinnamon, Ginger root, Coriander, Orange peel, Juniper berries.",
+            "price": "10.00",
+            "category": "herbal",
+            "image": "https://images.unsplash.com/photo-1600381893560-522c5d239fa0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=724&q=80",
+            "new-arrival": "true",
+            "best-seller": "false",
+            "temperature": "100",
+            "time": "5-6"
+        }
+    ]
+}

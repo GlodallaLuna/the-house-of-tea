@@ -72,14 +72,18 @@ ul {
   list-style: none;
 }
 
+.wrapper__header--shop {
+  width: 100%;
+}
+
 .header--shop {
   padding: 0 1.3rem;
   margin-top: .5rem;
+  width: 100%;
+  display: grid;
+  align-content: space-between;
 }
 
-.title--shop {
-  
-}
 
 
 
@@ -93,4 +97,5 @@ ul {
       font-size: 1.2rem;
       margin-top: 1.5rem;
   }
+ 
 }

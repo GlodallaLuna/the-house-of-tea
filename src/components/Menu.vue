@@ -37,10 +37,10 @@ export default {
                     <li><a class="menu__link" href="#">All</a></li>
                     <li><a class="menu__link" href="#">Black Tea</a></li>
                     <li><a class="menu__link" href="#">Green Tea</a></li>
-                    <li><a class="menu__link" href="#">White Tea</a></li>
-                    <li><a class="menu__link" href="#">Matcha</a></li>
+                    <li><a class="menu__link disabled" href="#">White Tea</a></li>
+                    <li><a class="menu__link disabled" href="#">Matcha</a></li>
                     <li><a class="menu__link" href="#">Herbal Tea</a></li>
-                    <li><a class="menu__link" href="#">Rooibos</a></li>
+                    <li><a class="menu__link disabled" href="#">Rooibos</a></li>
                     <li><a class="menu__link" href="#">Best Sellers </a><font-awesome-icon icon="fa-regular fa-star"/></li>
                     <li><a class="menu__link" href="#">New Arrivals</a></li>
                 </ul>
@@ -66,6 +66,7 @@ export default {
     border: 1px solid var(--clr-gray-100);
     background-color: var(--clr-primary-white);
     box-shadow: var(--box-shadow);
+    padding: 1rem;
 } 
 
 .dropdown {
@@ -77,19 +78,18 @@ export default {
     left: 0;
     width: 100%;
     border-top: none;
-    
     z-index: 998;
     
 }
 
 .menu__links {
     list-style: disc;
-    padding-left: 1.5rem;
+    padding-left: 1.2rem;
 }
 
 .menu__links>li {
-    margin-left: 1.5rem;
-    padding: .5rem;
+    margin-left: 1rem;
+    padding: .5rem 0;
 }
 
 .menu__link {
@@ -120,15 +120,23 @@ export default {
     color: var(--clr-gray-200);
 }
 
+/* sorted price and radio button styles  */
+
 .menu__sorted-price {
-    padding: 1.5rem 1.2rem 1rem 1.2rem;
+    /* padding: 1.5rem 1.2rem 1rem 1.2rem; */
+    padding-top: 1.2rem;
 }
 
 .menu__checkbox {
-    margin-left: 1.5rem;
-    padding: .2rem 
+    margin-left: 1rem;
+    padding: .2rem;
 }
 
+label {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
 
 
 .open {
@@ -141,10 +149,26 @@ export default {
     pointer-events: none;
 }
 
-@media screen and (min-width: 50.9em) {
+.disabled {
+    color: var(--clr-gray-200);
+    /* pointer-events: none; */
+    cursor: not-allowed;
+}
+
+@media screen and (min-width: 63.75em) {
+
+    .dropdown{
+        margin-top: 4rem;
+        padding: 1.2rem 1rem;
+    }
     .dropdown-menu {
         opacity: 1;
         pointer-events: auto; 
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding: 1rem .5rem;
+        
     }
 
     .arrow-down{
